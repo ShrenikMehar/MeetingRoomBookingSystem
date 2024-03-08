@@ -3,6 +3,7 @@ package sahaj.ai
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.LocalDateTime
+import java.time.temporal.ChronoUnit
 import java.time.temporal.TemporalAdjusters
 
 data class Schedule(
@@ -22,6 +23,15 @@ class Calendar {
         requiredStartTime: LocalDateTime,
         requiredEndTime: LocalDateTime
     ) = existingStartTime.isBefore(requiredEndTime) && existingEndTime.isAfter(requiredStartTime)
+
+    fun isDurationGreaterThanTwoHours(
+        requiredStartTime: LocalDateTime,
+        requiredEndTime: LocalDateTime
+    ): Boolean {
+        val hoursDifference = ChronoUnit.HOURS.between(requiredStartTime, requiredEndTime).toDouble()
+        val minutesDifference = ChronoUnit.MINUTES.between(requiredStartTime, requiredEndTime) % 60.toDouble()
+        return hoursDifference + (minutesDifference / 60.0) > 2.0
+    }
 
     fun viewBookingsByDay(roomId: MeetingRoom, viewingDate: LocalDate): MutableSet<Schedule> {
         val roomIds: MutableSet<Schedule> = mutableSetOf()

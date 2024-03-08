@@ -13,6 +13,9 @@ class OfficeAdmin(office: Office, private val calendar: Calendar) {
         roomOccupantName: String,
         bookingAgenda: String
     ): Boolean {
+        if (calendar.isDurationGreaterThanTwoHours(requiredStartTime, requiredEndTime))
+            return false
+
         for (schedule in calendar.schedules)
             if (schedule.meetingRoom == roomId &&
                 calendar.doesTimeOverlap(
@@ -34,6 +37,7 @@ class OfficeAdmin(office: Office, private val calendar: Calendar) {
         )
         return true
     }
+
 
     fun viewRoomsVacancyByTimeRange(
         viewingStartTime: LocalDateTime,

@@ -291,4 +291,22 @@ class AdminTest {
 
         assertEquals(setOf("101", "102"), vacantRoomsList)
     }
+
+    @Test
+    fun `Admin should be not able to book room 201 for more than 2 hours`() {
+        val meetingStartTime = LocalDateTime.of(2024, 2, 1, 14, 0)
+        val meetingEndTime = LocalDateTime.of(2024, 2, 1, 22, 0)
+        val meetingConductor = "Shrenik"
+        val meetingAgenda = "Some Good Things About Me"
+
+        val isBooked = officeAdmin.bookRoom(
+            room201,
+            meetingStartTime,
+            meetingEndTime,
+            meetingConductor,
+            meetingAgenda
+        )
+
+        assertFalse(isBooked)
+    }
 }
