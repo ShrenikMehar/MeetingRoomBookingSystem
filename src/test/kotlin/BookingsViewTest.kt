@@ -1,9 +1,6 @@
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import sahaj.ai.Calendar
-import sahaj.ai.MeetingRoom
-import sahaj.ai.Office
-import sahaj.ai.OfficeAdmin
+import sahaj.ai.*
 import java.time.LocalDate
 import java.time.LocalDateTime
 import kotlin.test.assertEquals
@@ -16,9 +13,16 @@ class BookingsViewTest {
     private lateinit var officeAdmin: OfficeAdmin
     private lateinit var viewingDate: LocalDate
 
+    private val requirements = listOf(
+        AvailableAsset.TELEVISION,
+        AvailableAsset.CAMERA,
+        AvailableAsset.MICROPHONE,
+        AvailableAsset.WHITEBOARD
+    )
+
     @BeforeEach
     fun setUp() {
-        room201 = MeetingRoom("201")
+        room201 = MeetingRoom("201",requirements)
         office = Office(listOf(room201))
         calendar = Calendar()
         officeAdmin = OfficeAdmin(office, calendar)

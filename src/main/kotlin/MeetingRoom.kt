@@ -1,3 +1,10 @@
 package sahaj.ai
 
-data class MeetingRoom(val roomId: String)
+enum class AvailableAsset {
+    TELEVISION,
+    MICROPHONE,
+    CAMERA,
+    WHITEBOARD
+}
+
+data class MeetingRoom(val roomId: String, val requirements: List<AvailableAsset>)
