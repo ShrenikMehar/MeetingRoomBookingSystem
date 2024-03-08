@@ -55,4 +55,14 @@ class OfficeAdmin(office: Office, private val calendar: Calendar) {
 
         return vacantRoomIds
     }
+
+    fun viewRoomsVacancyByAvailableAsset(requirements: List<AvailableAsset>): MutableSet<String> {
+        val requiredRoomIds: MutableSet<String> = mutableSetOf()
+
+        for (room in roomsList)
+            if (room.requirements.containsAll(requirements))
+                requiredRoomIds += room.roomId
+
+        return requiredRoomIds
+    }
 }
