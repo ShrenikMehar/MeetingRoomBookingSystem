@@ -97,7 +97,7 @@ class BookingsViewTest {
         val meetingOneConductor = "Logesh"
         val meetingOneAgenda = "Code Reviewing Pain"
 
-        val meetingTwoStartTime = LocalDateTime.of(2024, 2, 1, 20, 0)
+        val meetingTwoStartTime = LocalDateTime.of(2024, 2, 1, 23, 0)
         val meetingTwoEndTime = LocalDateTime.of(2024, 2, 2, 1, 0)
         val meetingTwoConductor = "Karun"
         val meetingTwoAgenda = "Away from Code Reviewing Pain"
@@ -143,7 +143,7 @@ class BookingsViewTest {
             listOf(
                 "Karun",
                 "Away from Code Reviewing Pain",
-                LocalDateTime.of(2024, 2, 1, 20, 0),
+                LocalDateTime.of(2024, 2, 1, 23, 0),
                 LocalDateTime.of(2024, 2, 2, 1, 0)
             )
         )
@@ -158,7 +158,7 @@ class BookingsViewTest {
         val meetingOneConductor = "Logesh"
         val meetingOneAgenda = "Code Reviewing Pain"
 
-        val meetingTwoStartTime = LocalDateTime.of(2024, 1, 31, 20, 0)
+        val meetingTwoStartTime = LocalDateTime.of(2024, 1, 31, 23, 0)
         val meetingTwoEndTime = LocalDateTime.of(2024, 2, 1, 1, 0)
         val meetingTwoConductor = "Karun"
         val meetingTwoAgenda = "Away from Code Reviewing Pain"
@@ -204,7 +204,7 @@ class BookingsViewTest {
             listOf(
                 "Karun",
                 "Away from Code Reviewing Pain",
-                LocalDateTime.of(2024, 1, 31, 20, 0),
+                LocalDateTime.of(2024, 1, 31, 23, 0),
                 LocalDateTime.of(2024, 2, 1, 1, 0)
             )
         )
@@ -280,7 +280,7 @@ class BookingsViewTest {
         val meetingOneConductor = "Logesh"
         val meetingOneAgenda = "Code Reviewing Pain"
 
-        val meetingTwoStartTime = LocalDateTime.of(2024, 2, 29, 20, 0)
+        val meetingTwoStartTime = LocalDateTime.of(2024, 2, 29, 23, 0)
         val meetingTwoEndTime = LocalDateTime.of(2024, 3, 1, 1, 0)
         val meetingTwoConductor = "Karun"
         val meetingTwoAgenda = "Away from Code Reviewing Pain"
@@ -326,7 +326,7 @@ class BookingsViewTest {
             listOf(
                 "Karun",
                 "Away from Code Reviewing Pain",
-                LocalDateTime.of(2024, 2, 29, 20, 0),
+                LocalDateTime.of(2024, 2, 29, 23, 0),
                 LocalDateTime.of(2024, 3, 1, 1, 0)
             )
         )
@@ -341,7 +341,7 @@ class BookingsViewTest {
         val meetingOneConductor = "Logesh"
         val meetingOneAgenda = "Code Reviewing Pain"
 
-        val meetingTwoStartTime = LocalDateTime.of(2024, 1, 31, 20, 0)
+        val meetingTwoStartTime = LocalDateTime.of(2024, 1, 31, 23, 0)
         val meetingTwoEndTime = LocalDateTime.of(2024, 2, 1, 1, 0)
         val meetingTwoConductor = "Karun"
         val meetingTwoAgenda = "Away from Code Reviewing Pain"
@@ -387,7 +387,7 @@ class BookingsViewTest {
             listOf(
                 "Karun",
                 "Away from Code Reviewing Pain",
-                LocalDateTime.of(2024, 1, 31, 20, 0),
+                LocalDateTime.of(2024, 1, 31, 23, 0),
                 LocalDateTime.of(2024, 2, 1, 1, 0)
             )
         )
